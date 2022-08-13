@@ -202,3 +202,96 @@ Es una agrupación de cuentas de usuario y recursos creadas por estas cuentas. P
 ### Grupo de administración
 
 Administra el acceso, directivas y cumplimiento de las suscripciones. Las suscripciones heredan las condiciones de su grupo.
+
+## Suscripciones y grupos de administración
+
+Se necesita una una suscripción de Azure para usar sus servicios:
+
+* Desarrollador: Pagas por los servicios a medida que los utilices.
+* Prueba: Experimentar con los productos, en algunos de manera gratuita.
+* Subscripción: A través de un partner d ecompras de servicios de Azure.
+* Estudiante: A través de un e-mail autorizado (.edu).
+
+### Limites
+
+* Facturación: Es la forma de facturarse. Cada subscripción tiene su propia factura.
+* Control de acceso: Cada subscripción tiene sus directivas de acceso.
+
+### ¿Cuándo se necesitan más suscripciones?
+
+* Separación de entornos de trabajo como desarrollo, pruebas, aislamiento de datos, entre otros.
+* Estructura Organizacional: Esta puede estar limitada según el presupuesto, tiempo de uso, por equipos o acceso de recursos.
+* Facturación: Para facilitar el seguimiento de costos según los entornos, como producción, desarrollo, pruebas, etc...
+* Límites por suscripción: Pueden haber algunas limitaciones de hardware por suscripción, entonces es necesario crear nuevas.
+
+### Grupos de administración
+
+#### Consideraciones
+
+Se pueden tener hasta 10.000 grupos de administración en un único directorio, donde el arbol del grupo, puede tener hasta seis niveles de profundidad.
+
+Cada grupo de adminsitración solo puede admitir un solo elemento primario, pero pueden tener muchos de secundarios.
+
+## Recursos y grupos de recursos
+
+Un recurso es un elemento administrable en Azure.
+
+### Grupo de recursos
+
+Un grupo de recursos es una agrupación de recursos relacionados para una solución.
+
+#### Características
+
+* Todos los recursos deben estar en un grupo de recursos.
+* Un recurso solo puede pertenecer a un grupo.
+* Los recursos pueden moverse entre los diferentes grupos.
+* No se pueden anidad, es decir, un grupo no puede pertenecer a otro.
+* Facilita la administración y organización.
+
+Cuando eliminas un grupo de recursos, también elemena los recursos que contiene.
+
+#### Autorización
+
+Los grupos de recursos utiliza un control basado en roles (RBAC, Role Based Access Control), permitiendo el acceso solo a lo necesario.
+
+#### Azure Resource Manager
+
+Esta es una herramienta que permite administrar los recursos de forma masiva y de forma muy rápida a través de plantillas.
+
+* Ventajas
+  * Las plantillas están en formato JSON
+  * Administra los recursos y grupos de recursos
+  * Tiene capacidad de reutilización
+  * RBAC (Role Based Access Control)
+  * Etiquetas
+  * Facturación
+
+## Regiones y zonas de disponibilidad
+
+Una región es un área geográfica con por lo menos un DataCenter, donde algunos servicios son exclusivos de una región.
+  
+También pueden existir algunas regiones especiales, como puede ser para el uso de los goviernos de algunos paises u otros para poder operar en dicho pais.
+
+Azure es el proveedor con más regiones globales y en constante expansión.
+
+### Zonas de disponibilidad
+
+Una zona de disponibilidad es que haya dos DataCenters en una misma ubicación, con su propia electricidad, seguridad y regrigeración. Esto permite redundancia de servicios y datos ante errores u otros desastres.
+
+No todas las regiones no son compatibles con zonas de disponibilidad, a parte puede generar más costos.
+
+Las opciones del servicios en estas zonas de disponibilidad:
+
+* Zona
+* Redundancia de zona
+
+### Pares de regiones
+
+Regiones con por lo menos 500 Km de distancia entre ambas para replicar los recursos en caso de interrupciones.
+
+* Desastres naturales
+* Incendios
+* Disturvios civiles
+* Ausencia de electricidad
+* Daños en la red fisica
+* Etc...
